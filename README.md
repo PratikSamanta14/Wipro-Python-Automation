@@ -129,6 +129,6 @@ By completing these assignments, this repo demonstrates:
 
 ## 📄 License
 
-This project is for educational purposes as part of coursework/lab assignments.
+This assignment repo is for wipro python automation course using selenium.
 
 ---
