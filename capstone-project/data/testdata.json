@@ -1,0 +1,21 @@
+{
+  "account": {
+    "name": "Pratik Samanta",
+    "email": "placeholder@example.com",
+    "password": "Test@12345",
+    "day": "15",
+    "month": "August",
+    "year": "2001",
+    "first_name": "Pratik",
+    "last_name": "Samanta",
+    "address1": "123 Automation Street",
+    "country": "India",
+    "state": "West Bengal",
+    "city": "Kolkata",
+    "zipcode": "700001",
+    "mobile_number": "9876543210"
+  },
+  "search_products": ["Blue Top", "Men Tshirt", "Sleeveless Dress"],
+  "primary_search_term": "Dress",
+  "desired_quantity": 3
+}
