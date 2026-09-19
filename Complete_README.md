@@ -7,9 +7,9 @@ A collection of hands-on assignments exploring web element identification and in
 | # | Assignment | Core Concept | Status |
 |---|-----------|---------------|--------|
 | 1 | Web Element Identification | Locating elements with `By.ID`, `By.NAME`, `By.TAG_NAME`, `By.LINK_TEXT`, `By.CLASS_NAME` | ✅ |
-| 2 | Multiple Element Identification | Finding and iterating over lists of elements (`find_elements`) | 🔜 |
-| 3 | CSS Selector Challenge | CSS selectors with wildcards for dynamic attribute values | 🔜 |
-| 4 | Child Nodes Using CSS | CSS child/descendant selectors for nested elements | 🔜 |
+| 2 | Multiple Element Identification | Finding and iterating over lists of elements (`find_elements`) | ✅ |
+| 3 | CSS Selector Challenge | CSS selectors with wildcards for dynamic attribute values | ✅ |
+| 4 | Child Nodes Using CSS | CSS child/descendant selectors for nested elements | ✅ |
 
 ## 🛠️ Tech Stack
 
@@ -19,22 +19,37 @@ A collection of hands-on assignments exploring web element identification and in
 
 ## 📁 Repository Structure
 
-```
-Selenium-PythonAutomation/
+The project root is named `Wipro-Python-Automation`. The repository follows this updated structure:
+
+```text
+Wipro-Python-Automation/
 │
-├── assignment1_element_identification/
-│   └── locate_by_strategies.py
+├── assignment-1/
+│   ├── assignment1.py
+│   ├── index.html
+│   ├── README.md
+│   └── requirements.txt
 │
-├── assignment2_multiple_elements/       
-│   └── find_all_links.py
+├── assignment-2/
+│   ├── asssignment2.py
+│   ├── index.html
+│   ├── README.md
+│   └── requirements.txt
 │
-├── assignment3_css_wildcard/            
-│   └── css_wildcard_selector.py
+├── assignment-3/
+│   ├── assignment3.py
+│   ├── index.html
+│   ├── README.md
+│   └── requirements.txt
 │
-├── assignment4_child_nodes/            
-│   └── css_child_selector.py
+├── assignment-4/
+│   ├── assignment4.py
+│   ├── index.html
+│   ├── README.md
+│   ├── requirements.txt
+│   └── sample.xml
 │
-├── requirements.txt
+├── Installation Guide.mp4
 └── README.md
 ```
 
@@ -87,10 +102,12 @@ driver.find_element(By.CSS_SELECTOR, "div.container > button")
 
 ## ⚙️ Setup & Installation
 
+**🎥 Visual Guide:** For a complete walkthrough of the setup process, please watch the included `Installation Guide.mp4` file located in the root directory.
+
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Soumick2004/Selenium-PythonAutomation.git
-   cd Selenium-PythonAutomation
+   cd Wipro-Python-Automation
    ```
 
 2. **Create a virtual environment** *(recommended)*
@@ -100,24 +117,20 @@ driver.find_element(By.CSS_SELECTOR, "div.container > button")
    ```
 
 3. **Install dependencies**
+   Navigate to any assignment folder to install its specific dependencies:
    ```bash
-   pip install -r requirements.txt
-   ```
-
-   `requirements.txt` should include:
-   ```
-   selenium
-   webdriver-manager
+   pip install -r assignment-1/requirements.txt
    ```
 
 4. **Run an assignment**
+   Execute the target python file within its respective assignment directory:
    ```bash
-   python assignment1_element_identification/locate_by_strategies.py
+   python assignment-1/assignment1.py
    ```
 
 ## ▶️ Usage
 
-Each assignment folder contains a standalone script. Update the target webpage URL at the top of each script before running, then execute it directly — the browser will launch, perform the locating/interaction steps, and print or log the results to the console.
+Each assignment folder contains a standalone script and a local `index.html` file. Ensure the target webpage URL is correctly pointed to the local HTML file (or a remote server if modified) before running. Execute it directly — the browser will launch, perform the locating/interaction steps, and print or log the results to the console.
 
 ## ✅ Learning Outcomes
 
@@ -125,10 +138,10 @@ By completing these assignments, this repo demonstrates:
 - Proficiency with all major Selenium locator strategies
 - Handling single vs. multiple element retrieval
 - Writing robust CSS selectors, including wildcard/attribute-based selectors
-- Navigating and interacting with nested DOM structures
+- Navigating and interacting with nested DOM structures (such as interacting with XML data formats like `sample.xml` found in `assignment-4`).
 
 ## 📄 License
 
-This assignment repo is for wipro python automation course using selenium.
+This project is for educational purposes as part of coursework/lab assignments.
 
 ---

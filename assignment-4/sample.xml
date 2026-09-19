@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore>
+
+    <book id="101" category="automation">
+
+        <title>Selenium Automation</title>
+
+        <author>Pratik</author>
+
+        <price>500</price>
+
+    </book>
+
+    <book id="102" category="programming">
+
+        <title>Python Programming</title>
+
+        <author>John</author>
+
+        <price>450</price>
+
+    </book>
+
+</bookstore>
