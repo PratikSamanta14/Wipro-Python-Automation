@@ -46,7 +46,6 @@ class HomePage(BasePage):
     def open_first_result(self):
         """Click 'View Product' on the first card returned by the search."""
         first_card = self.driver.find_elements(*self.PRODUCT_CARDS)[0]
-        self.scroll_to(first_card)
         view_link = first_card.find_element(By.CSS_SELECTOR, "a[href*='/product_details/']")
-        view_link.click()
+        self.click_element(view_link, label="first search result 'View Product' link")
         return self

@@ -31,20 +31,26 @@ class BasePage:
     def find_clickable(self, locator):
         return self.wait.until(EC.element_to_be_clickable(locator))
 
-    def click(self, locator):
+    def click_element(self, element, label: str = "element"):
         """
-        Click with resilience against third-party ad/overlay elements that
-        automationexercise.com occasionally injects mid-test (e.g. Google
-        ad iframes), which can intercept a plain .click() call.
+        Click an already-located WebElement with resilience against
+        third-party ad/overlay elements that automationexercise.com
+        occasionally injects mid-test (e.g. Google ad iframes), which can
+        intercept a plain .click() call. Every click in this project should
+        route through here (directly or via click()) so any click site gets
+        the same fallback.
         """
-        element = self.find_clickable(locator)
         self.scroll_to(element)
         try:
             element.click()
         except ElementClickInterceptedException:
-            print(f"[CLICK] Normal click intercepted on {locator}; removing overlays and retrying via JS.")
+            print(f"[CLICK] Normal click intercepted on {label}; removing overlays and retrying via JS.")
             self.remove_ad_overlays()
             self.driver.execute_script("arguments[0].click();", element)
+
+    def click(self, locator):
+        element = self.find_clickable(locator)
+        self.click_element(element, label=str(locator))
 
     def type_text(self, locator, text: str, clear_first: bool = True):
         element = self.find(locator)
